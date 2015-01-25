@@ -1,1 +1,1 @@
-# LTC-Shopping-List-v1.0
+# LTC Shopping List v1.0
