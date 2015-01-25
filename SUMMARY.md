@@ -10,5 +10,5 @@
 * [Collecting the Users Name](collecting_the_users_name.md)
 * [Defining the Model](defining_the_model.md)
 * [Bringing it all together - the ViewController](bringing_it_all_together_-_the_viewcontroller.md)
-* Expand your App!
+* [Expand your App!](expand_your_app.md)
 
