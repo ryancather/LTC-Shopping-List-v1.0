@@ -9,4 +9,5 @@
 * [Configuring the User Interfaces](configuring_the_user_interfaces.md)
 * [Collecting the Users Name](collecting_the_users_name.md)
 * [Defining the Model](defining_the_model.md)
+* Bringing it all together - the ViewController
 
