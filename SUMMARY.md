@@ -7,8 +7,8 @@
 * [Model View Controller](model_view_controller.md)
 * [Create Additional Files](create_additional_files.md)
 * [Configuring the User Interfaces](configuring_the_user_interfaces.md)
-* [Defining the Model](defining_the_model.md)
 * [Collecting the Users Name](collecting_the_users_name.md)
+* [Defining the Model](defining_the_model.md)
 * Expand your App!
 * [Bringing it all together - the ViewController](bringing_it_all_together_-_the_viewcontroller.md)
 
