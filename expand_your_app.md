@@ -8,7 +8,7 @@ In this section, you app will include extra items and sections (and include diff
 
 [64]: images/ltc-shopping-order-v1/expand-your-app-.png
 
-### 8.1 Expand your Offerings!
+## 8.1 Expand your Offerings!
 
 Update the populateDataWithItems() method to include new items and new categories. Don't forget to update the increment values as appropriate!
 
@@ -180,7 +180,7 @@ You can find the complete list here :
 
 [65]: images/ltc-shopping-order-v1/expand-your-offerings-.png
 
-### 8.2 Update the Section Headings
+## 8.2 Update the Section Headings
 
 Your app will still work without this step, however it will look better with proper headings rather than "Error".
 

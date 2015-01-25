@@ -8,7 +8,7 @@ In this first Version, the Model class will be very static, and a lot of hard co
 
 [32]: images/ltc-shopping-order-v1/defining-the-model.png
 
-### 6.1 Create ShoppingItems.swift
+## 6.1 Create ShoppingItems.swift
 
 Create a new iOS swift file (the same way as before) to create a new Swift file called "ShoppingListItems.swift". Create the following basic structure to the class.
 
@@ -16,7 +16,7 @@ Create a new iOS swift file (the same way as before) to create a new Swift file 
 
 [33]: images/ltc-shopping-order-v1/create-shoppingitemsswift.png
 
-### 6.2 Struct!
+## 6.2 Struct!
 
 In order to structure your code a little, define an "Item" struct in the ShoppingListItems class which will contain the title, count, an increment value and a variable for an image.
 
@@ -28,7 +28,7 @@ The Increment value is needed to make it easier for the user to change items tha
 
 [34]: images/ltc-shopping-order-v1/struct-.png
 
-### 6.3 Define an array
+## 6.3 Define an array
 
 In order to store the full offerings of items, you will need to define an array of items.
 
@@ -38,7 +38,7 @@ This syntax may look strange, but you are creating a two dimensional array of it
 
 [35]: images/ltc-shopping-order-v1/define-an-array.png
 
-### 6.4 Define the function to populate the arrays
+## 6.4 Define the function to populate the arrays
 
 This function will be called when the ShoppingListItems class is instantiated. You'll do this in a later step.
 
@@ -46,7 +46,7 @@ This function will be called when the ShoppingListItems class is instantiated. Y
 
 [36]: images/ltc-shopping-order-v1/define-the-function-to-populate-the-arrays.png
 
-### 6.5 Define the category arrays
+## 6.5 Define the category arrays
 
 Expand the populateDataWithItems() method to create two arrays of items. These two arrays will be added to the multidimensional array you defined earlier.
 
@@ -56,7 +56,7 @@ These two arrays will store all the butter and cheese items available to the use
 
 [37]: images/ltc-shopping-order-v1/define-the-category-arrays.png
 
-### 6.6 Define empty butter and cheese items
+## 6.6 Define empty butter and cheese items
 
 These items will be used to temporarily create new items before adding them to the corresponding category arrays
 
@@ -64,7 +64,7 @@ These items will be used to temporarily create new items before adding them to t
 
 [38]: images/ltc-shopping-order-v1/define-empty-butter-and-cheese-items.png
 
-### 6.7 Create the first butter item
+## 6.7 Create the first butter item
 
 Enter the code to create a new butterItem and add it to the buterArray. 
 
@@ -74,7 +74,7 @@ Currently you don't have images in your project so don't set that value yet. Thi
 
 [39]: images/ltc-shopping-order-v1/create-the-first-butter-item.png
 
-### 6.8 Second butter item
+## 6.8 Second butter item
 
 Create a second butter item and append it to the butter array. You can reuse the butterItem variable as adding it to the array make a copy of the struct to store in the array.
 
@@ -84,7 +84,7 @@ Note the += for adding the second Butter item to the array. This tells Xcode to 
 
 [40]: images/ltc-shopping-order-v1/second-butter-item.png
 
-### 6.9 Create two Cheese items
+## 6.9 Create two Cheese items
 
 In the same fashion as the butter items, create two Cheese items and add them to the cheese array.
 
@@ -92,7 +92,7 @@ In the same fashion as the butter items, create two Cheese items and add them to
 
 [41]: images/ltc-shopping-order-v1/create-two-cheese-items.png
 
-### 6.10 Populate the array
+## 6.10 Populate the array
 
 Now that you've got two items in their corresponding category arrays, populate the itemsList array with the two sub arrays.
 
@@ -102,7 +102,7 @@ This is the fundamental structure of your Model in the MVC. You can extend this 
 
 [42]: images/ltc-shopping-order-v1/populate-the-array.png
 
-### 6.11 Populate the array on Instantiation
+## 6.11 Populate the array on Instantiation
 
 Create a init() method to call this populateDataWithItems() method so that when the model gets instantiated, your array will be populated and available to the View Controllers.
 
@@ -110,7 +110,7 @@ Create a init() method to call this populateDataWithItems() method so that when 
 
 [43]: images/ltc-shopping-order-v1/populate-the-array-on-instantiation.png
 
-### 6.12 Reporting the number of sections
+## 6.12 Reporting the number of sections
 
 In order to display the items to the user on your view, there is the ability to display them in sections. See the example under  at the start of the tutorial. The Shopping List View Controller needs to know how many sections to create in order to display them all (and no more).
 
@@ -122,7 +122,7 @@ Create a method which returns with the size of the array,
 
 [44]: images/ltc-shopping-order-v1/reporting-the-number-of-sections.png
 
-### 6.13 Reporting the Section Headers
+## 6.13 Reporting the Section Headers
 
  In order to do display the sections properly, you have to give each section a heading. One way of doing this is to allow the Model to be queried and it respond with the section headings and this is the way you'll do that here. 
 
@@ -134,7 +134,7 @@ This method can be expanded later to add additional sections as required.
 
 [45]: images/ltc-shopping-order-v1/reporting-the-section-headers.png
 
-### 6.14 Reporting the number of rows in each section.
+## 6.14 Reporting the number of rows in each section.
 
 Similar to displaying the sections, the View Controller needs to be aware of how many rows are in each section. Currently you have 2 each, but again, you'll want to generate this dynamically.
 
@@ -144,7 +144,7 @@ Create a method which returns with the number of items in each category array. T
 
 [46]: images/ltc-shopping-order-v1/reporting-the-number-of-rows-in-each-section.png
 
-### 6.15 Item Detail Methods
+## 6.15 Item Detail Methods
 
 Write three methods which, given the section and row the user selects, returns the Name, Count and Image of that item.
 
@@ -154,7 +154,7 @@ These will be called when the View Controller is creating individual rows (the t
 
 [47]: images/ltc-shopping-order-v1/item-detail-methods.png
 
-### 6.16 Allow for the user to update the item Counts
+## 6.16 Allow for the user to update the item Counts
 
 So far, the access methods are all about informing the View Controller and not about updating the data (the Model). However, you want the item count (the quantity) to increase when the user taps on that cell. 
 
@@ -166,7 +166,7 @@ Note the += in the assignment. This takes the value of itemCount of the particul
 
 [48]: images/ltc-shopping-order-v1/allow-for-the-user-to-update-the-item-counts.png
 
-### 6.17 Define the Reset Method
+## 6.17 Define the Reset Method
 
 You'll recall that you created a button on the Shopping List view called Reset. If the user presses this button, all the quantity values are set back to zero. Create this method in the Model now so you can access it later.
 
@@ -176,7 +176,7 @@ This method doesn't need to take any arguments or return anything as it simply r
 
 [49]: images/ltc-shopping-order-v1/define-the-reset-method.png
 
-### 6.18 Return the email text
+## 6.18 Return the email text
 
 The last method you need to create in your model is the method which builds the text to email. In later versions this method can be modified to perform the export in another way, but for now, it will simply create a String with the list of selected items and their counts.
 
@@ -190,7 +190,7 @@ The \n in the string indicates a return character. This will put each item on it
 
 [50]: images/ltc-shopping-order-v1/return-the-email-text.png
 
-### 6.19 That's it!
+## 6.19 That's it!
 
 The Model is done. Now the View Controller has to do the hard work.
 

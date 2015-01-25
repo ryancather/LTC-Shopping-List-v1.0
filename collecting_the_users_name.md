@@ -4,7 +4,7 @@ In this section you will write the code so that when the user taps the button, t
 
 This View will also have a View Controller but no model, as you only need to collect the users name, a simple string.
 
-### 5.1 Create the connection from UI Elements to code
+## 5.1 Create the connection from UI Elements to code
 
 Open the Main.storyboard.
 
@@ -20,7 +20,7 @@ Select the User Name View in the storyboard and click on the Assistant Editor bu
 
 [22]: images/ltc-shopping-order-v1/create-the-connection-from-ui-elements-to-code.png
 
-### 5.2 Create Button Action
+## 5.2 Create Button Action
 
 Now to create the function for when the user taps the Begin Ordering Button.
 
@@ -30,7 +30,7 @@ Control Click Drag from the Begin Ordering button to the View Controller.
 
 [23]: images/ltc-shopping-order-v1/create-button-action.png
 
-### 5.3 Create the Action
+## 5.3 Create the Action
 
 In the menu that appears set the connection type to be Action and the name to be getUserName. Click Connection. 
 
@@ -40,7 +40,7 @@ This creates the IBAction function structure for you.
 
 [24]: images/ltc-shopping-order-v1/create-the-action.png
 
-### 5.4 Give the Text Field a name
+## 5.4 Give the Text Field a name
 
 Perform the same steps for the Text View, except in this case, set the connection type to be Outlet and name it "userNameField".
 
@@ -50,7 +50,7 @@ Your project should now look like the following
 
 [25]: images/ltc-shopping-order-v1/give-the-text-field-a-name.png
 
-### 5.5 Set up a UserName variable
+## 5.5 Set up a UserName variable
 
 Before writing the code for the function, set up a String variable to temporarily hold the users name. As this variable may or may not contain a value, it needs to be created as an Optional with the ? postfix.
 
@@ -58,7 +58,7 @@ Before writing the code for the function, set up a String variable to temporaril
 
 [26]: images/ltc-shopping-order-v1/set-up-a-username-variable.png
 
-### 5.6 Write the getUserName() function
+## 5.6 Write the getUserName() function
 
 Now the string variable has been created and you've created the connections between the View and the code, you can now write the code for the getUserName() function to store the users name from the userNameField element.
 
@@ -66,7 +66,7 @@ Now the string variable has been created and you've created the connections betw
 
 [27]: images/ltc-shopping-order-v1/write-the-getusername---function.png
 
-### 5.7 Prepare for the Seque
+## 5.7 Prepare for the Seque
 
 So far, you've collected the users name and stored it into a variable, now you will need to write another function that will actually perform the segue - load the next view.
 
@@ -76,7 +76,7 @@ This method is overridden from the parent UIViewController class.
 
 [28]: images/ltc-shopping-order-v1/prepare-for-the-seque.png
 
-### 5.8 Set up the Destination Variable
+## 5.8 Set up the Destination Variable
 
 There's one last thing you have to do for this to work. You've set up the code so that the view will load, but you need to "send" the usersName variable to the next View Controller. You can do this by creating a variable in the ShoppingListViewController class and then store the usersName variable into that one.
 
@@ -90,7 +90,7 @@ Save the file.
 
 [29]: images/ltc-shopping-order-v1/set-up-the-destination-variable.png
 
-### 5.9 "Send" the users name
+## 5.9 "Send" the users name
 
 Back in the UserNameViewController class, change the prepareForSegue() function to set the newly created currentUser variable to be the usersName.
 
@@ -102,7 +102,7 @@ That's all you need to do to store the name in the next View Controller. Save th
 
 [30]: images/ltc-shopping-order-v1/-send--the-users-name.png
 
-### 5.10 Test that the name was received.
+## 5.10 Test that the name was received.
 
 Just to make sure that the users name has been sent correctly, you can use the name to change the title of the view to include the users name.
 
